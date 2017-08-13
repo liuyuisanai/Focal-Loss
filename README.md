@@ -8,3 +8,19 @@ To use [Focal-Loss](https://arxiv.org/abs/1708.02002) layer, you can:
 
 2) You can also add the three files, `focal_loss_layer.cpp`, `focal_loss_layer.cu` and `focal_loss_layer.hpp`, and modify `caffe.proto` in your own caffe. 
 
+## An example in prototxt
+
+```
+layer {
+  name: "loss_focal"
+  type: "FocalLoss"
+  bottom: "predicted"
+  bottom: "label"
+  top: "loss_focal"
+  loss_weight: 10
+  loss_param{
+    normalize: true
+    normalization: FULL
+  } 
+}
+```
