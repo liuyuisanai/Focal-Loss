@@ -1,4 +1,4 @@
-# Reproduction Focal-loss on Caffe
+# Reproduction of Focal-loss on Caffe
 
 To use [Focal-Loss](https://arxiv.org/abs/1708.02002) layer, you can:
 
