@@ -19,9 +19,9 @@ __global__ void FocalLossForwardGPU(const int nthreads,
 		}
 		else {
 			scale[ i ] = alpha * powf(1 - ( target_value == 1 ? sigmoid_data[ i ] : ( 1 - sigmoid_data[ i ] ) ), gamma);
-			oriloss[ i ] = - £¨input_data[ i ] * ( target[ i ] - ( input_data[ i ] >= 0 ) ) -
+			oriloss[ i ] = -input_data[ i ] * ( target[ i ] - ( input_data[ i ] >= 0 ) ) -
 				log(1 + exp(input_data[ i ] - 2 * input_data[ i ] *
-				( input_data[ i ] >= 0 )))£©;
+				( input_data[ i ] >= 0 )));
 			counts[ i ] = 1;
 		}
 	}
