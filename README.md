@@ -10,6 +10,8 @@ To use [Focal-Loss](https://arxiv.org/abs/1708.02002) layer, you can:
 
 ## An example in prototxt
 
+**Using it as the way you use `cross entropy loss layer`.**
+
 ```
 layer {
   name: "loss_focal"
