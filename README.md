@@ -26,3 +26,7 @@ layer {
   } 
 }
 ```
+
+## Implementation for softmax form
+
+Please refer to [this repo](https://github.com/zimenglan-sysu-512/Focal-Loss)
